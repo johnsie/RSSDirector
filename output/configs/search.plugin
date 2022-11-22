@@ -1,0 +1,4 @@
+public static string Process(string title)
+{
+	return title;
+}

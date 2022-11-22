@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20C9CF96-5C3B-4AD9-8A48-7DC174B184C8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RealNews</RootNamespace>
+    <AssemblyName>RealNews</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\output\</OutputPath>
+    <DefineConstants>NETSTANDARD1_3; net4; NOASYNC</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fastJSON\dynamic.cs" />
+    <Compile Include="fastJSON\Formatter.cs" />
+    <Compile Include="fastJSON\Getters.cs" />
+    <Compile Include="fastJSON\Helper.cs" />
+    <Compile Include="fastJSON\JSON.cs" />
+    <Compile Include="fastJSON\JsonParser.cs" />
+    <Compile Include="fastJSON\JsonSerializer.cs" />
+    <Compile Include="fastJSON\Reflection.cs" />
+    <Compile Include="fastJSON\SafeDictionary.cs" />
+    <Compile Include="Forms\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\myListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helper\Compiler.cs" />
+    <Compile Include="Helper\CoreWebServer.cs" />
+    <Compile Include="Entities.cs" />
+    <Compile Include="feedreader\Extensions.cs" />
+    <Compile Include="feedreader\Feed.cs" />
+    <Compile Include="feedreader\FeedItem.cs" />
+    <Compile Include="feedreader\FeedReader.cs" />
+    <Compile Include="feedreader\Feeds\0.91\Rss091Feed.cs" />
+    <Compile Include="feedreader\Feeds\0.91\Rss091FeedImage.cs" />
+    <Compile Include="feedreader\Feeds\0.91\Rss091FeedItem.cs" />
+    <Compile Include="feedreader\Feeds\0.92\Rss092Feed.cs" />
+    <Compile Include="feedreader\Feeds\0.92\Rss092FeedImage.cs" />
+    <Compile Include="feedreader\Feeds\0.92\Rss092FeedItem.cs" />
+    <Compile Include="feedreader\Feeds\1.0\Rss10Feed.cs" />
+    <Compile Include="feedreader\Feeds\1.0\Rss10FeedImage.cs" />
+    <Compile Include="feedreader\Feeds\1.0\Rss10FeedItem.cs" />
+    <Compile Include="feedreader\Feeds\1.0\Rss10FeedTextInput.cs" />
+    <Compile Include="feedreader\Feeds\2.0\Rss20Feed.cs" />
+    <Compile Include="feedreader\Feeds\2.0\Rss20FeedImage.cs" />
+    <Compile Include="feedreader\Feeds\2.0\Rss20FeedItem.cs" />
+    <Compile Include="feedreader\Feeds\Atom\AtomFeed.cs" />
+    <Compile Include="feedreader\Feeds\Atom\AtomFeedItem.cs" />
+    <Compile Include="feedreader\Feeds\Atom\AtomLink.cs" />
+    <Compile Include="feedreader\Feeds\Atom\AtomPerson.cs" />
+    <Compile Include="feedreader\Feeds\Base\BaseFeed.cs" />
+    <Compile Include="feedreader\Feeds\Base\BaseFeedItem.cs" />
+    <Compile Include="feedreader\Feeds\Base\FeedCloud.cs" />
+    <Compile Include="feedreader\Feeds\Base\FeedImage.cs" />
+    <Compile Include="feedreader\Feeds\Base\FeedItemEnclosure.cs" />
+    <Compile Include="feedreader\Feeds\Base\FeedItemSource.cs" />
+    <Compile Include="feedreader\Feeds\Base\FeedTextInput.cs" />
+    <Compile Include="feedreader\Feeds\DublinCore.cs" />
+    <Compile Include="feedreader\Feeds\Itunes\ItunesCategory.cs" />
+    <Compile Include="feedreader\Feeds\Itunes\ItunesChannel.cs" />
+    <Compile Include="feedreader\Feeds\Itunes\ItunesExtensions.cs" />
+    <Compile Include="feedreader\Feeds\Itunes\ItunesImage.cs" />
+    <Compile Include="feedreader\Feeds\Itunes\ItunesItem.cs" />
+    <Compile Include="feedreader\Feeds\Itunes\ItunesOwner.cs" />
+    <Compile Include="feedreader\Feeds\Syndication.cs" />
+    <Compile Include="feedreader\FeedType.cs" />
+    <Compile Include="feedreader\Helpers.cs" />
+    <Compile Include="feedreader\HtmlFeedLink.cs" />
+    <Compile Include="feedreader\Parser\AbstractXmlFeedParser.cs" />
+    <Compile Include="feedreader\Parser\AtomParser.cs" />
+    <Compile Include="feedreader\Parser\Exceptions\FeedTypeNotSupportedException.cs" />
+    <Compile Include="feedreader\Parser\Exceptions\InvalidFeedLinkException.cs" />
+    <Compile Include="feedreader\Parser\Factory.cs" />
+    <Compile Include="feedreader\Parser\FeedParser.cs" />
+    <Compile Include="feedreader\Parser\IFeedParser.cs" />
+    <Compile Include="feedreader\Parser\Rss091Parser.cs" />
+    <Compile Include="feedreader\Parser\Rss092Parser.cs" />
+    <Compile Include="feedreader\Parser\Rss10Parser.cs" />
+    <Compile Include="feedreader\Parser\Rss20Parser.cs" />
+    <Compile Include="Forms\frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLog.Designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFeed.Designer.cs">
+      <DependentUpon>frmFeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\TreeViewHelper.cs" />
+    <Compile Include="HtmlAgilityPack\crc32.cs" />
+    <Compile Include="HtmlAgilityPack\EncodingFoundException.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlAttribute.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlAttributeCollection.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlCommentNode.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlDocument.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlElementFlag.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlEntity.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNameTable.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNode.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNode.Xpath.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNodeCollection.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNodeNavigator.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlNodeType.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlParseError.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlParseErrorCode.cs" />
+    <Compile Include="HtmlAgilityPack\HtmlTextNode.cs" />
+    <Compile Include="HtmlAgilityPack\NameValuePair.cs" />
+    <Compile Include="HtmlAgilityPack\NameValuePairList.cs" />
+    <Compile Include="HtmlAgilityPack\Utilities.cs" />
+    <Compile Include="Helper\HtmlSanitizer.cs" />
+    <Compile Include="Helper\ImageCache.cs" />
+    <Compile Include="Helper\Logger.cs" />
+    <Compile Include="Forms\mWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\placeholdertextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helper\RealNewsWeb.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\Office2007BlackColorTable.cs" />
+    <Compile Include="Renderer\Office2007Rendererbse.cs" />
+    <Compile Include="Renderer\OfficeColorTable.cs" />
+    <Compile Include="Renderer\ProfessionalColorTable.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Helper\ZipStorer.cs" />
+    <Compile Include="Singleinstance.cs" />
+    <EmbeddedResource Include="Forms\AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLog.resx">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFeed.resx">
+      <DependentUpon>frmFeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\notfound.img" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rss.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\news_new.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+    <None Include="Resources\dark.css" />
+    <None Include="Resources\star.png" />
+    <None Include="Resources\downloadimgs.ico" />
+    <None Include="Resources\settings.ico" />
+    <None Include="Resources\rss_add.ico" />
+    <None Include="Resources\rss_edit.ico" />
+    <None Include="Resources\refresh.ico" />
+    <None Include="Resources\next.ico" />
+    <None Include="Resources\logs.ico" />
+    <None Include="Resources\Shutdown%284%29.ico" />
+    <None Include="Resources\EyeSlash.png" />
+    <None Include="Resources\Star1.png" />
+    <None Include="Resources\PowerOff.png" />
+    <None Include="Resources\Eye.png" />
+    <None Include="Resources\Edit.png" />
+    <None Include="Resources\Image.png" />
+    <None Include="Resources\Image1.png" />
+    <None Include="Resources\Cog.png" />
+    <None Include="Resources\FileTextO.png" />
+    <None Include="Resources\Rss.png" />
+    <None Include="Resources\TrashO.png" />
+    <None Include="Resources\Compress.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\tray.ico" />
+    <None Include="Resources\trayhighlight.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

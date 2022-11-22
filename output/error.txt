@@ -1,0 +1,25 @@
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Concurrent.ConcurrentDictionary`2.get_Item(TKey key)
+   at RealNews.frmMain.ShowFeedFromTitle(String title) in D:\Downloads\RealNews-master\RealNews\frmMain.cs:line 1167
+   at RealNews.frmMain.treeView1_AfterSelect(Object sender, TreeViewEventArgs e) in D:\Downloads\RealNews-master\RealNews\frmMain.cs:line 1133
+   at System.Windows.Forms.TreeView.OnAfterSelect(TreeViewEventArgs e)
+   at System.Windows.Forms.TreeView.TvnSelected(NMTREEVIEW* nmtv)
+   at System.Windows.Forms.TreeView.WmNotify(Message& m)
+   at System.Windows.Forms.TreeView.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmNotify(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.TreeView.WmMouseDown(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.TreeView.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at RealNews.Program.Main() in D:\Downloads\RealNews-master\RealNews\Program.cs:line 30

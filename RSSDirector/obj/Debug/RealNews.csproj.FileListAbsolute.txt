@@ -1,0 +1,15 @@
+D:\Downloads\RealNews-master\output\RealNews.exe
+D:\Downloads\RealNews-master\output\RealNews.pdb
+D:\Downloads\RealNews-master\RealNews\obj\Debug\RealNews.csproj.AssemblyReference.cache
+D:\Downloads\RealNews-master\RealNews\obj\Debug\Interop.SHDocVw.dll
+D:\Downloads\RealNews-master\RealNews\obj\Debug\RealNews.csproj.ResolveComReference.cache
+D:\Downloads\RealNews-master\RealNews\obj\Debug\RealNews.AboutBox1.resources
+D:\Downloads\RealNews-master\RealNews\obj\Debug\RealNews.frmLog.resources
+D:\Downloads\RealNews-master\RealNews\obj\Debug\RealNews.frmMain.resources
+D:\Downloads\RealNews-master\RealNews\obj\Debug\RealNews.frmFeed.resources
+D:\Downloads\RealNews-master\RealNews\obj\Debug\RealNews.frmSettings.resources
+D:\Downloads\RealNews-master\RealNews\obj\Debug\RealNews.Properties.Resources.resources
+D:\Downloads\RealNews-master\RealNews\obj\Debug\RealNews.csproj.GenerateResource.cache
+D:\Downloads\RealNews-master\RealNews\obj\Debug\RealNews.csproj.CoreCompileInputs.cache
+D:\Downloads\RealNews-master\RealNews\obj\Debug\RealNews.exe
+D:\Downloads\RealNews-master\RealNews\obj\Debug\RealNews.pdb

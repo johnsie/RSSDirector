@@ -1,0 +1,77 @@
+v1.5.7
+-Forked and renamed to RSSDirector for my own personal use (John M.)
+
+v1.5.6
+- bug fixes
+
+v1.5.5
+- bug fix sorted feed items
+
+v1.5.4
+- replaced ListView with custom ListBox because of theme problems
+- image cache check for zero length files
+
+v1.5.3
+- caching compiled plugin MethodInfo
+- internal feature flag
+
+v1.5.2
+- bug fix running on Win7
+- check for 0 length images in cache
+
+v1.5.1
+- bug fix ensuring items are visible at the end of the feed list
+- memory cleanup on load and save feeds
+- bug fix running on WinXP
+
+v1.5.0
+- bug fix filtering old items when item does not provide a publish date
+- cleanup all, resets failed feed colours
+- added dark mode theme
+
+v1.4.4
+- add/edit feed form validation checks
+- added OnCloseMinimize config to close or minimize on form close click
+- adding a new feed with category updates the tree correctly
+- added SkipFeedItemsDaysOlderThan config for feeds that don't filter recent items when sending
+- singleton app now works correctly and opens existing window even if in tray
+
+v1.4.3.1
+- fixed tab orders in forms
+
+v1.4.3
+- added the use of a custom proxy 
+- colour coding feeds in tree if failed to get data
+
+v1.4.2
+- search title pre-process plugin 
+
+v1.4.1
+- added google search the feed item title in the toolbar
+- cleanup the UI style
+- updated to new zipstorer.cs
+
+v1.4 
+- added alt+up and down to navigate the feed list  
+- usability tweaks 
+- fix for some sites returning 403
+
+v1.3 
+- usability tweaks
+- check image already downloaded before downloading
+
+v1.2
+- code cleanup
+- added feed update timeout 
+- local datetime in settings.config
+- download images method checks if already downloaded
+- selecting folder/category shows all feeds below it
+
+v1.1
+- upgrade to fastJSON v2.2.0
+- search clear button only if text entered
+- fix search and current unread count update
+- added cleanup image cache for orphan images
+
+v1.0
+- initial release
