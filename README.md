@@ -1,5 +1,5 @@
 # RSSDirector
-.net RSS reader based on RealNews
+.net RSS reader based on RealNews for my own personal use
 
 ## Features
 - Single EXE file
